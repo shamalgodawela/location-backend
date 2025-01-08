@@ -11,10 +11,15 @@ const port = 8000;
 
 // Configure CORS
 app.use(cors({
-  origin: 'https://location-tracking-admin-ten.vercel.app', 
+  origin: 'https://location-backend-five.vercel.app', 
   methods: 'GET,POST,PUT,DELETE',
   allowedHeaders: 'Content-Type,Authorization',
 }));
+
+app.get("/",(req,res)=>{
+  res.json({meesage:"hello world from backend"})
+
+})
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
