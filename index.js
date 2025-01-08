@@ -13,8 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://location-tracking-admin-ten.vercel.app"],
-  credentials: true
+  origin: ["http://localhost:3000", "https://location-tracking-admin-ten.vercel.app"], // Allowed frontends
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  credentials: true, // Allow credentials (cookies, authorization headers)
 }));
 
 
