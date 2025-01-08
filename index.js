@@ -17,6 +17,14 @@ app.use(cors({
   credentials: true
 }));
 
+
+
+app.get("/", (req, res)=>{
+  res.json({message:'hello word from backend'})
+
+});
+
+
 const jwt = require('jsonwebtoken');
 
 mongoose.connect(process.env.MONGO_URI, {
