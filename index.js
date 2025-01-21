@@ -133,7 +133,7 @@ app.post("/login", async (req, res) => {
       const token = jwt.sign(
         { userId: user._id, email: user.email },
         'your_jwt_secret_key', // Replace with your own secret key
-        { expiresIn: '1h' } // Token expiration time (1 hour)
+        { expiresIn: '10h' } 
       );
 
       
