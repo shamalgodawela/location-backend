@@ -220,14 +220,14 @@ app.post("/admin-login", async (req, res) => {
     }
 
     try {
-        // Parse the provided date to get the start and end of the day
+        
         const startDate = new Date(date);
         startDate.setHours(0, 0, 0, 0);
 
         const endDate = new Date(date);
         endDate.setHours(23, 59, 59, 999);
 
-        // Query the location database
+        
         const locations = await Location.find({
             userId: userId,
             timestamp: {
